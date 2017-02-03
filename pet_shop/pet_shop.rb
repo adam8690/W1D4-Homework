@@ -26,9 +26,13 @@ end
 def pets_by_breed(shop, breed)
 pets = []
 for pet in shop[:pets]
-  if pet[:breed] == "British Shorthair"
+  if pet[:breed] == breed
     pets.push(pet)
   end
 end
 return pets
+end
+
+def find_pet_by_name()
+
 end
