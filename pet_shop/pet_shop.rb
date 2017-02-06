@@ -34,24 +34,28 @@ return pets
 end
 
 def find_pet_by_name(shop, name)
-for pet in shop[:pets]
-  if pet[:name] == name
-    return pet
+  for pet in shop[:pets]
+    if pet[:name] == name
+      return pet
+    end
   end
-end
+
+  return nil
 end
 
 def remove_pet_by_name(shop, name)
 for pet in shop[:pets]
   if pet[:name] == name
     shop[:pets].delete(pet)
-    # i = shop[:pets].index(shop[:pets][:name])
-    # p " AAAA #{i}"
-    # shop[:pets].delete_at(i)
   end
 end
 end
 
 def add_pet_to_stock(shop, new_pet)
   shop[:pets] << [new_pet]
+end
+
+def customer_pet_count(customer)
+# use .lenght or .size to return 0 on an empty array. Don't need to make a special zero case. 
+return customer[:pets].length
 end
