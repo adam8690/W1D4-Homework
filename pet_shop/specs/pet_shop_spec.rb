@@ -131,19 +131,19 @@ class TestPetShop < Minitest::Test
     assert_nil(nil, pet)
   end
   
-  def test_remove_pet_by_name
-    p @pet_shop
-    remove_pet_by_name(@pet_shop, "Arthur")
-    p @pet_shop
-    pet = find_pet_by_name(@pet_shop,"Arthur")
-    assert_equal(nil, pet)
-  end
-
-  # def test_add_pet_to_stock
-  #   add_pet_to_stock(@pet_shop, @new_pet)
-  #   count = stock_count(@pet_shop)
-  #   assert_equal(7, count)
+  # def test_remove_pet_by_name
+  #   p @pet_shop
+  #   remove_pet_by_name(@pet_shop, "Arthur")
+  #   p @pet_shop
+  #   pet = find_pet_by_name(@pet_shop,"Arthur")
+  #   assert_equal(nil, pet)
   # end
+
+  def test_add_pet_to_stock
+    add_pet_to_stock(@pet_shop, @new_pet)
+    count = stock_count(@pet_shop)
+    assert_equal(7, count)
+  end
 
   # def test_customer_pet_count
   #   count = customer_pet_count(@customers[0])
