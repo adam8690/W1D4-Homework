@@ -40,3 +40,15 @@ for pet in shop[:pets]
   end
 end
 end
+
+def remove_pet_by_name(shop, name)
+for pet in shop[:pets]
+  if pet[:name] == name
+    shop[:pets].delete(pet)
+    # i = shop[:pets].index(shop[:pets][:name])
+    # p " AAAA #{i}"
+    # shop[:pets].delete_at(i)
+  end
+end
+end
+
